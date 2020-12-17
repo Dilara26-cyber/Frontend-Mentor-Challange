@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: hsl(234, 17%, 12%);
+  color: hsl(0, 0%, 100%);
+  background-image: url(images/bg-stars.svg);
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+}
+#soon {
+  display: block;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+}
+.launch-text {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.smalltext {
+  letter-spacing: 0.35em;
+  font-size: 0.5em;
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+#day,
+#hour,
+#minute,
+#second {
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  color: hsl(345, 95%, 68%);
+}
+
+.btm-img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 80%;
+  background-size: initial;
+  background-image: url(images/pattern-hills.svg);
+}
+
+.icons {
+  position: absolute;
+  top: 90%;
+}
+
+i {
+  margin: 0 1em;
+  color: hsl(237, 18%, 59%);
+  transition: color 0.2s ease-out;
+}
+
+i:hover {
+  color: hsl(345, 95%, 68%);
+}
+
+@media (min-width: 960px) {
+  .smalltext {
+    font-size: 1em;
+  }
+  .launch-text {
+    letter-spacing: 0.5em;
+  }
+
+  #soon {
+    display: inline;
+  }
+}
+
+@media (min-width: 1440px) {
+  .btm-img {
+    background-repeat: repeat-x;
+  }
+
+  #day,
+  #hour,
+  #minute,
+  #second {
+  }
+}
+
+@media (min-width: 1441px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    background-color: hsl(237, 18%, 59%);
+  }
+
+  .container {
+    width: 1400px;
+    height: 800px;
+    background-color: hsl(234, 17%, 12%);
+  }
+}
